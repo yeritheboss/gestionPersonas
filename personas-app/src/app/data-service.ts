@@ -1,9 +1,13 @@
 import { Persona } from './persona.model';
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpResponse} from '@angular/common/http';
+import * as http from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 //clase se encarga para recuperar la informacion de la bbdd y conectarse con services de java
 //para gestionar y hacer los arreglos a Angular haremos otra clase llamada PersonaSrv
+
+
+
 @Injectable() //configurador para que sea un servicio que se pueda usar de todas partes
 export class DataService {
 
@@ -12,7 +16,7 @@ export class DataService {
  *
  * @param httpClient
  */
-constructor(private httpClient){}
+constructor(private httpClient: HttpClient){}
 urlBase = 'http://localhost:8080/personas/webservice/personas';
 
 /**

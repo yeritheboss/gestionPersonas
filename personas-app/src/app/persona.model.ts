@@ -1,4 +1,3 @@
-
 /***
  * Constuccion de la clase Persona para Angular
  */
